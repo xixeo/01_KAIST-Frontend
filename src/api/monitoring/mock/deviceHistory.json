@@ -1,0 +1,37 @@
+{
+    "success": true,
+    "code": 200,
+    "msg": "성공하였습니다.",
+    "list": [
+        {
+            "jsondata": "{\"data\":  [    {      \"device_type\": \"type1\",      \"measure_dtm\": 20210929152331,      \"temp\": 2,      \"message\": \"BEKc81fQz3oLK6VBK6KLLLLDJ3F8KTFG7SdycDlf\"    }  ]}",
+            "temp": 2,
+            "device_id": "device_1",
+            "device_nm": "온도센서1",
+            "device_grp_nm": "디바이스 테스트 그룹1",
+            "device_type": "type1",
+            "message": "BEKc81fQz3oLK6VBK6KLLLLDJ3F8KTFG7SdycDlf",
+            "measure_dtm": 20210929152331,
+            "running": "디바이스 테스트 그룹1",
+            "device_grp_id": "GRP_001",
+            "gs1key": "00123456780921",
+            "time": "2021-09-29T15:23:31.611705617+09:00",
+            "device_unique_id": "00123456780921"
+        },
+        {
+            "jsondata": "{\"data\":  [    {      \"device_type\": \"type4\",      \"measure_dtm\": 20210929152314,      \"temp\": 94,      \"message\": \"DI4MpLr5CbK6cK3KSS9o0HDKK0hZicvpFHbdlKHe\"    }  ]}",
+            "temp": 94,
+            "device_id": "device_1",
+            "device_nm": "온도센서1",
+            "device_grp_nm": "디바이스 테스트 그룹1",
+            "device_type": "type4",
+            "message": "DI4MpLr5CbK6cK3KSS9o0HDKK0hZicvpFHbdlKHe",
+            "measure_dtm": 20210929152314,
+            "running": "디바이스 테스트 그룹1",
+            "device_grp_id": "GRP_001",
+            "gs1key": "00123456780921",
+            "time": "2021-09-29T15:23:14.910773862+09:00",
+            "device_unique_id": "00123456780921"
+        }
+    ]
+}

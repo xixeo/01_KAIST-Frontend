@@ -1,0 +1,527 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@import './subless/color';
+@import './subless/button';
+
+// 내용부가 짧을때 스크롤 안생기게 하려고 스타일 지정
+.el-container {
+  .main_section_scroll {
+    &:fullscreen {
+      object-fit: contain;
+      position: fixed !important;
+      top: 0px !important;
+      right: 0px !important;
+      bottom: 0px !important;
+      left: 0px !important;
+      box-sizing: border-box !important;
+      min-width: 0px !important;
+      max-width: none !important;
+      min-height: 0px !important;
+      max-height: none !important;
+      width: 100% !important;
+      height: 100% !important;
+      transform: none !important;
+      margin: 0px !important;
+    }
+    > .__vuescroll {
+      > .__panel {
+        > .__view {
+          min-height: 90% !important;
+        }
+      }
+    }
+  }
+}
+
+// main header
+.el-header {
+  padding: 0;
+  border-bottom: 1px solid @subColor_08;
+  // top
+  .top {
+    overflow: hidden;
+    height: 60px;
+    position: relative;
+    background: @headerColor01;
+    // 로고 적용하는 부분
+    h1 {
+      position: absolute;
+      //top: -3px;
+      margin-top: 7px;
+      left: 30px;
+      width: 2px;
+      //cursor: pointer;
+      a {
+        display: block;
+        width: 300px;
+        height: 90px;
+        text-indent: -9999rem;
+        overflow: hidden;
+        &.ci_ko {
+          // background: url('./image/hhiCI_01.png') no-repeat;
+          background: url('../image/header_ko_ci.png') no-repeat;
+          background-size: 80%;
+        }
+        &.ci_en {
+          // background: url('./image/hhiCI_en_01.png') no-repeat;
+          background: url('../image/header_en_ci.png') no-repeat;
+          background-size: 80%;
+        }
+      }
+    }
+    // 로고 옆 타이틀
+    p {
+      color: @mainColor01;
+      font-size: 18px;
+      position: absolute;
+      top: calc(30px / 2);
+      left: 222px;
+    }
+    // 우측 서브메뉴 기본설정
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      position: absolute;
+      //top: 0;
+      margin-top: 5px;
+      right: 30px;
+      li {
+        position: relative;
+        height: 55px;
+        line-height: 55px;
+        &:nth-child(1)::before,
+        &:nth-child(2)::before,
+        &:nth-child(3)::before {
+          content: '';
+          width: 0;
+          height: 10px;
+          position: absolute;
+          top: 23px;
+          right: 0;
+          border-right: 1px solid @subColor_07;
+        }
+        a {
+          color: @subColor_05;
+          font-size: 14px;
+          text-decoration: none;
+          padding: 3px 15px;
+          color: #ffffff;
+        }
+        a:hover {
+          color: @subColor_01;
+        }
+
+        // 알림
+        .el-icon-bell {
+          &:before {
+            font-weight: bold;
+          }
+        }
+        .el-badge {
+          display: block;
+          .el-badge__content.is-fixed {
+            top: 10px;
+            right: 28px;
+            line-height: 16px;
+          }
+        }
+        // 대시보드 확장 아이콘
+        &.dashboard_full_icon {
+          div {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            margin-top: calc(35px / 2);
+            &:hover {
+              button {
+                color: @subColor_01;
+              }
+            }
+            button {
+              position: absolute;
+              top: -6px;
+              left: 0px;
+              font-size: 26px;
+              color: #ffffff;
+              background-color: transparent;
+              border: 0;
+              outline: none;
+              transform: rotate(45deg);
+              -webkit-transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  // gnb
+  .gnb {
+    height: 60px;
+    //background: @mainColor01;
+    background: @headerColor01;
+    .horizontal_scroll {
+      width: calc(100vw - 70px);
+    }
+    // ul {
+    //   display: flex;
+    //   list-style: none;
+    //   padding: 0;
+
+    //   li {
+    //     height: 45px;
+    //     line-height: 45px;
+    //     // padding: 0 20px;
+    //     white-space: nowrap;
+    //     text-decoration: none;
+    //     margin: 0 20px;
+    //     display: inline-block;
+    //     a {
+    //       color: @subColor_09;
+    //       text-decoration: none;
+    //       font-size: 18px;
+    //       font-weight:500;
+    //       font-family:'hhiBold';
+    //       cursor: pointer;
+    //       text-shadow:1px 1px #008e69;
+    //     }
+    //   }
+    // }
+
+    // 즐겨찾기 버튼영역
+    // .top_book_mark {
+    //   top: 12px;
+    //   right: 28px;
+    //   z-index: 1;
+    //   background: @mainColor01;
+    //   button {
+    //     width: 22px;
+    //     height: 22px;
+    //     font-size: 22px;
+    //     color: #fff;
+    //     outline: none;
+    //     &:first-child {
+    //       color: #ffed4a;
+    //     }
+    //     &:last-child {
+    //       &:hover {
+    //         color: @borderColor_08;
+    //       }
+    //     }
+    //   }
+    // }
+
+    // 즐겨찾기 배경색
+    // .bookmark_bg {
+    //   right: 0;
+    //   top: 0;
+    //   width: 100px;
+    //   height: 45px;
+    //   background: linear-gradient(
+    //     to right,
+    //     fade(@mainColor01, 50%),
+    //     @mainColor01
+    //   );
+    // }
+  }
+}
+
+// 메뉴
+.side_menu_box {
+  position: relative;
+  background: blue;
+  .el-icon-arrow-right {
+    color: @mainColor02;
+    position: absolute;
+    top: 10px;
+    left: 240px;
+    z-index: 1;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .clo_icon {
+    left: 5px;
+    //top: 110px;
+    top: 110px;
+    position: fixed;
+  }
+  .side_menu {
+    //background: red;
+    height: 100%;
+  }
+}
+
+// 사이드바 고정하면서 fixed적용한 부모에 가로값 설정(A,B타입)
+.aside_width {
+  width: 230px;
+}
+
+.el-aside {
+  background: @mainColor02;
+  border: none;
+  position: relative;
+}
+
+.fixed_side_height {
+  //height: calc(100% - 160px);
+  height: calc(100%);
+}
+
+.fixed_margin {
+  //margin: 10px 0 60px;
+  margin: 100px 0 60px;
+}
+
+.aside_title {
+  color: @subColor_09;
+  font-size: 20px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+
+// api사용 할때 나오는 '로딩중입니다' 화면
+.el-loading-mask {
+  width: 150px !important;
+  height: 130px !important;
+  top: calc((100vh - 130px) / 2) !important;
+  left: calc((100% - 150px) / 2) !important;
+  border-radius: 20px !important;
+  .el-loading-spinner {
+    height: 80px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    .el-icon-loading {
+      color: #fff;
+      font-size: 45px;
+    }
+    .el-loading-text {
+      color: #fff;
+      margin-top: 10px;
+    }
+  }
+  &.is-fullscreen {
+    .el-loading-spinner {
+      margin-top: 0px;
+    }
+  }
+}
+
+// 입력박스 내 label
+.frame_lbl {
+  color: @blackColor_02;
+  font-family: 'hhiLight';
+  font-size: 15px;
+  line-height: 34px;
+  height: 34px;
+  display: block;
+}
+
+.frame_txt,
+.frame_txtarea,
+.frame_chk,  // 체크박스
+.frame_rdo,  // 라디오 박스
+.frame_cbo {
+  // 셀렉트
+  border: 1px solid @borderColor_01;
+  color: @blackColor_02;
+  font-family: 'hhiLight';
+  font-size: 15px;
+  background-color: @subColor_09;
+}
+
+// 아이폰 그림자, 보더 라운드 제거
+.frame_cbo,
+.frame_txt,
+.frame_txtarea,
+.frame_cbo {
+  // 셀렉트
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+.frame_txt,
+.frame_cbo {
+  height: 34px;
+  padding: 0 10px;
+  line-height: 34px;
+}
+
+.frame_txt {
+  &:disabled {
+    background-color: @btnColor_06;
+  }
+}
+
+.frame_txt {
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+// form
+.icon_lbl {
+  //@apply relative inline-block;
+
+  padding-left: 15px;
+
+  &:before {
+    //@apply absolute;
+
+    content: '';
+    top: 14px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: @subColor_01;
+  }
+}
+
+// input[type="text"],
+// input[type="password"]
+// {
+//   height: auto; /* 높이 초기화 */
+//   line-height: 1.5; /* line-height 초기화  normal */
+//   padding: 1px 5px; /* 여백 설정 */
+//   //padding: .8em .5em; /* 여백 설정 */
+// }
+
+// section에서 footer값을 뺀 높이 (A타입)
+.fixed_height {
+  //height: calc(100% - 160px);
+  height: calc(100% - 115px);
+}
+
+// 사이드바가 닫혔을때 세션값
+.section_width_offSideber {
+  width: 100%;
+}
+
+.section_width_onSideber {
+  width: calc(100% - 230px);
+}
+
+.top {
+  overflow: hidden;
+  height: 60px;
+  position: relative;
+  background: @headerColor01;
+  // 로고 적용하는 부분
+  h1 {
+    position: absolute;
+    //top: -3px;
+    margin-top: 7px;
+    left: 30px;
+    width: 2px;
+    //cursor: pointer;
+    a {
+      display: block;
+      width: 300px;
+      height: 90px;
+      text-indent: -9999rem;
+      overflow: hidden;
+      &.ci_ko {
+        // background: url('./image/hhiCI_01.png') no-repeat;
+        background: url('../image/header_ko_ci.png') no-repeat;
+        background-size: 80%;
+      }
+      &.ci_en {
+        // background: url('./image/hhiCI_en_01.png') no-repeat;
+        background: url('../image/header_en_ci.png') no-repeat;
+        background-size: 80%;
+      }
+    }
+  }
+  // 로고 옆 타이틀
+  p {
+    color: @mainColor01;
+    font-size: 18px;
+    position: absolute;
+    top: calc(30px / 2);
+    left: 222px;
+  }
+  // 우측 서브메뉴 기본설정
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    //top: 0;
+    margin-top: 5px;
+    right: 30px;
+    li {
+      position: relative;
+      height: 55px;
+      line-height: 55px;
+      &:nth-child(1)::before,
+      &:nth-child(2)::before,
+      &:nth-child(3)::before {
+        content: '';
+        width: 0;
+        height: 10px;
+        position: absolute;
+        top: 23px;
+        right: 0;
+        border-right: 1px solid @subColor_07;
+      }
+      a {
+        color: @subColor_05;
+        font-size: 14px;
+        text-decoration: none;
+        padding: 3px 15px;
+        color: #ffffff;
+      }
+      a:hover {
+        color: @subColor_01;
+      }
+
+      // 알림
+      .el-icon-bell {
+        &:before {
+          font-weight: bold;
+        }
+      }
+      .el-badge {
+        display: block;
+        .el-badge__content.is-fixed {
+          top: 10px;
+          right: 28px;
+          line-height: 16px;
+        }
+      }
+      // 대시보드 확장 아이콘
+      &.dashboard_full_icon {
+        div {
+          position: relative;
+          width: 20px;
+          height: 20px;
+          margin-top: calc(35px / 2);
+          &:hover {
+            button {
+              color: @subColor_01;
+            }
+          }
+          button {
+            position: absolute;
+            top: -6px;
+            left: 0px;
+            font-size: 26px;
+            color: #ffffff;
+            background-color: transparent;
+            border: 0;
+            outline: none;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}

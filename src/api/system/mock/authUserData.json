@@ -1,0 +1,70 @@
+{
+  "list": [
+    {
+      "domainCd": "a",
+      "authgrpCd": "mock_A1",
+      "authgrpAsgCls": "A",
+      "userId": "admin",
+      "userNm": "관리자",
+      "insertDt": "2021-04-14 15:39:21",
+      "insertId": "system",
+      "__created__": false,
+      "__modified__": false
+    },
+    {
+      "domainCd": "a",
+      "authgrpCd": "mock_A1",
+      "authgrpAsgCls": "A",
+      "userId": "user_1",
+      "userNm": "사용자_1",
+      "insertDt": "2021-04-14 15:39:21",
+      "insertId": "system",
+      "__created__": false,
+      "__modified__": false
+    },
+    {
+      "domainCd": "a",
+      "authgrpCd": "mock_A1",
+      "authgrpAsgCls": "A",
+      "userId": "user_2",
+      "userNm": "사용자_2",
+      "insertDt": "2021-04-14 15:39:21",
+      "insertId": "system",
+      "__created__": false,
+      "__modified__": false
+    },
+    {
+      "domainCd": "a",
+      "authgrpCd": "mock_A1",
+      "authgrpAsgCls": "A",
+      "userId": "user_4",
+      "userNm": "사용자_4",
+      "insertDt": "2021-04-14 15:39:21",
+      "insertId": "system",
+      "__created__": false,
+      "__modified__": false
+    },
+    {
+      "domainCd": "a",
+      "authgrpCd": "mock_A2",
+      "authgrpAsgCls": "A",
+      "userId": "admin",
+      "userNm": "관리자",
+      "insertDt": "2021-04-14 15:39:21",
+      "insertId": "system",
+      "__created__": false,
+      "__modified__": false
+    },
+    {
+      "domainCd": "a",
+      "authgrpCd": "mock_A2",
+      "authgrpAsgCls": "A",
+      "userId": "user_3",
+      "userNm": "사용자_3",
+      "insertDt": "2021-04-14 15:39:21",
+      "insertId": "system",
+      "__created__": false,
+      "__modified__": false
+    }
+  ]
+}

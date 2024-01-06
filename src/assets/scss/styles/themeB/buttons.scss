@@ -1,0 +1,238 @@
+/*
+    Button
+*/
+
+@import './variables.scss';
+
+.btn {
+  border: 0;
+  border-radius: 10px;
+  font-size: 13px;
+  margin: 0px 1px;
+  cursor: pointer;
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  // Flat buttons
+  &.btn-flat {
+    border-radius: 0px;
+    //border-width: 1px;
+    box-shadow: none;
+  }
+}
+
+.light-blue-btn {
+  color: $base-text-color;
+  background-color: $light-blue;
+  border-color: $light-blue;
+  box-shadow: none;
+
+  &:hover {
+    background-color: $light-blue-hover;
+    border-color: $light-blue-hover;
+  }
+}
+
+.light-orange-btn {
+  color: $base-text-color;
+  background-color: $button-orange;
+  border-color: $button-orange;
+  box-shadow: none;
+
+  &:hover {
+    background-color: $button-orange-hover;
+    border-color: $button-orange-hover;
+  }
+}
+
+.blue-btn {
+  color: $base-text-color;
+  background-color: $blue;
+  border-color: $blue;
+  box-shadow: none;
+}
+.red-btn {
+  color: $base-text-color;
+  background-color: $red;
+  border-color: $red;
+  box-shadow: none;
+}
+.green-btn {
+  color: $base-text-color;
+  background-color: $green;
+  border-color: $green;
+  box-shadow: none;
+}
+
+.tiffany-btn {
+  color: $base-text-color;
+  background-color: $tiffany;
+  border-color: $tiffany;
+  box-shadow: none;
+}
+
+.yellow-btn {
+  color: $base-text-color;
+  background-color: $yellow;
+  border-color: $yellow;
+  box-shadow: none;
+}
+
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.btn-sm {
+  padding: 0.15rem 1.2rem;
+  // font-size: 0.875rem;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+.btn-xs {
+  padding: 0.125rem 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  border-radius: 0.15rem;
+}
+
+// .pan-btn {
+//     font-size: 14px;
+//     color: $base-text-color;
+//     // border: none;
+//     // outline: none;
+//     // transition: 600ms ease all;
+//     // position: relative;
+//     // display: inline-block;
+// }
+
+// .btn-info {
+//     color: $base-text-color;
+//     background-color: #17a2b8;
+//     border-color: #17a2b8;
+//     box-shadow: none;
+//   }
+
+// .btn-block {
+//     display: block;
+//     width: 50%;
+//   }
+
+// .btn-info {
+//     color: $base-text-color;
+//     background-color: #17a2b8;
+//     border-color: #17a2b8;
+//     box-shadow: none;
+//   }
+
+// .btn-info:hover {
+//     color: $base-text-color;
+//     background-color: #138496;
+//     border-color: #117a8b;
+// }
+
+// @import './variables.scss';
+
+// @mixin colorBtn($color) {
+//   background: $color;
+
+//   &:hover {
+//     color: $color;
+
+//     &:before,
+//     &:after {
+//       background: $color;
+//     }
+//   }
+// }
+
+// .blue-btn {
+//   @include colorBtn($blue)
+// }
+
+// .light-blue-btn {
+//   @include colorBtn($light-blue)
+// }
+
+// .red-btn {
+//   @include colorBtn($red)
+// }
+
+// .pink-btn {
+//   @include colorBtn($pink)
+// }
+
+// .green-btn {
+//   @include colorBtn($green)
+// }
+
+// .tiffany-btn {
+//   @include colorBtn($tiffany)
+// }
+
+// .yellow-btn {
+//   @include colorBtn($yellow)
+// }
+
+// .pan-btn {
+//   font-size: 14px;
+//   color: $base-text-color;
+//   padding: 14px 36px;
+//   border-radius: 8px;
+//   border: none;
+//   outline: none;
+//   transition: 600ms ease all;
+//   position: relative;
+//   display: inline-block;
+
+//   &:hover {
+//     background: $base-text-color;
+
+//     &:before,
+//     &:after {
+//       width: 100%;
+//       transition: 600ms ease all;
+//     }
+//   }
+
+//   &:before,
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     height: 2px;
+//     width: 0;
+//     transition: 400ms ease all;
+//   }
+
+//   &::after {
+//     right: inherit;
+//     top: inherit;
+//     left: 0;
+//     bottom: 0;
+//   }
+// }
+
+// .custom-button {
+//   display: inline-block;
+//   line-height: 1;
+//   white-space: nowrap;
+//   cursor: pointer;
+//   background: #fff;
+//   color: $base-text-color;
+//   -webkit-appearance: none;
+//   text-align: center;
+//   box-sizing: border-box;
+//   outline: 0;
+//   margin: 0;
+//   padding: 10px 15px;
+//   font-size: 14px;
+//   border-radius: 4px;
+// }

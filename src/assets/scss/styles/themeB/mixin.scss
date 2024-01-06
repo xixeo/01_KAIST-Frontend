@@ -1,0 +1,72 @@
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: $base-bg-default-color;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $base-body-hover-color;
+    border-radius: 20px;
+  }
+}
+
+@mixin position($pos, $w, $h) {
+  position: $pos;
+  width: $w;
+  height: $h;
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin pct($pct) {
+  width: #{$pct};
+  position: relative;
+  margin: 0 auto;
+}
+
+@mixin triangle($width, $height, $color, $direction) {
+  $width: $width/2;
+  $color-border-style: $height solid $color;
+  $transparent-border-style: $width solid transparent;
+  height: 0;
+  width: 0;
+
+  @if $direction==up {
+    border-bottom: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  } @else if $direction==right {
+    border-left: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  } @else if $direction==down {
+    border-top: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  } @else if $direction==left {
+    border-right: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+}
+
+@mixin textshadow {
+  text-shadow: 1px 2px 0 $base-shadow-color, 2px 4px 0 $base-shadow-color, 3px 6px 0 $base-shadow-color, 4px 8px 0 $base-shadow-color,
+    5px 10px 0 $base-shadow-color, 6px 12px 0 $base-shadow-color, 7px 14px 0 $base-shadow-color, 8px 16px 0 $base-shadow-color,
+    9px 18px 0 $base-shadow-color, 10px 20px 0 $base-shadow-color, 14px 20px 10px rgba(0, 0, 0, 0.8);
+}

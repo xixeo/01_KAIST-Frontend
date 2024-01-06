@@ -1,0 +1,20 @@
+{
+  "uidev": {
+    "userCd": "uidev",
+    "userPw": "1234",
+    "userNm": "개발자",
+    "roleList": ["development"]
+  },
+  "admin": {
+    "userCd": "admin",
+    "userPw": "1",
+    "userNm": "관리자",
+    "roleList": ["admin", "development"]
+  },
+  "root": {
+    "userCd": "roo@thingshub.kr",
+    "userPw": "1234",
+    "userNm": "관리자",
+    "roleList": ["root", "development"]
+  }
+}

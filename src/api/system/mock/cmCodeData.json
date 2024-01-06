@@ -1,0 +1,130 @@
+{
+  "list": [
+    {
+      "codeCd": "a",
+      "codeNm": "systemAA",
+      "note": "테스트1"
+    },
+    {
+      "codeCd": "b",
+      "codeNm": "systemBB",
+      "note": "테스트2"
+    },
+    {
+      "codeCd": "c",
+      "codeNm": "systemCC",
+      "note": "테스트3"
+    },
+    {
+      "codeCd": "d",
+      "codeNm": "systemDD",
+      "note": "테스트4"
+    }
+  ],
+  "data": [
+    {
+      "codeCd": "a",
+      "codeNm": "systemAA",
+      "level": "0",
+      "prntsCd": "",
+      "data1": "aa",
+      "data2": "aaa",
+      "data3": "aaaa",
+      "data4": "",
+      "data5": ""
+    },{
+      "codeCd": "a1",
+      "codeNm": "a-1",
+      "level": "1",
+      "prntsCd": "a",
+      "data1": "a-1",
+      "data2": "a-1-1",
+      "data3": "a-1-1-1",
+      "data4": "",
+      "data5": "",
+      "sort" : "1"
+    },{
+      "codeCd": "a2",
+      "codeNm": "a-2",
+      "level": "1",
+      "prntsCd": "a",
+      "data1": "a-2",
+      "data2": "a-2-2",
+      "data3": "a-2-2-2",
+      "data4": "",
+      "data5": "",
+      "sort" : "2"
+    },{
+      "codeCd": "a3",
+      "codeNm": "a-3",
+      "level": "1",
+      "prntsCd": "a",
+      "data1": "a-3",
+      "data2": "a-3-3",
+      "data3": "a-3-3-3",
+      "data4": "",
+      "data5": "",
+      "sort" : "3"
+    },{
+      "codeCd": "b",
+      "codeNm": "systemBB",
+      "level": "0",
+      "prntsCd": "",
+      "data1": "bb",
+      "data2": "bbb",
+      "data3": "bbbb",
+      "data4": "",
+      "data5": ""
+    },{
+      "codeCd": "b1",
+      "codeNm": "b-1",
+      "level": "1",
+      "prntsCd": "b",
+      "data1": "b-1",
+      "data2": "b-1-1",
+      "data3": "b-1-1-1",
+      "data4": "",
+      "data5": ""
+    },{
+      "codeCd": "b2",
+      "codeNm": "b-2",
+      "level": "1",
+      "prntsCd": "b",
+      "data1": "b-2",
+      "data2": "b-2-2",
+      "data3": "b-2-2-2",
+      "data4": "",
+      "data5": ""
+    },{
+      "codeCd": "c",
+      "codeNm": "systemCC",
+      "level": "0",
+      "prntsCd": "",
+      "data1": "cc",
+      "data2": "ccc",
+      "data3": "cccc",
+      "data4": "",
+      "data5": ""
+    },{
+      "codeCd": "c1",
+      "codeNm": "c-1",
+      "level": "1",
+      "prntsCd": "c",
+      "data1": "c-1",
+      "data2": "c-1-1",
+      "data3": "c-1-1-1",
+      "data4": "",
+      "data5": ""
+    },{
+      "codeCd": "d",
+      "codeNm": "systemDD",
+      "level": "0",
+      "prntsCd": "",
+      "data1": "dd",
+      "data2": "ddd",
+      "data3": "dddd",
+      "data4": "",
+      "data5": ""
+    }
+  ]
+}

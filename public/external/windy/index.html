@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+    <title>Windy System</title>
+    <script>
+      var options = {
+        // Required: API key
+        key: 'PsLAtXpsPTZexBwUkO7Mx5I',
+        verbose: false,
+        lat: 34.6,
+        lon: 128.9,
+        zoom: 9
+      }
+      var id = null
+      var prsMapData = {}
+      var items = {
+        marker: null,
+        markers: null,
+        layer: null
+      }
+      var markers = null
+      var marker = null
+      var layer = null
+      var mapData = null
+
+      // init()
+
+      function setID(obj) {
+        id = obj
+      }
+
+      function init(obj) {
+        options = obj
+        windyInit(obj, windyAPI => {
+          const { map } = windyAPI
+          mapData = map
+          // changeMap()
+          window.parent.postMessage({ id: id, msg: 'windy init' }, '*')
+        })
+      }
+
+      function clear() {
+        if (items.markers.length) {
+          for (let item of this.items.markers) {
+            item.remove()
+          }
+        }
+        if (items.tracklines.length) {
+          for (let item of items.tracklines) {
+            item.remove()
+          }
+        }
+        if (items.pointMarkers.length) {
+          for (let item of items.pointMarkers) {
+            item.remove()
+          }
+        }
+        items.markers = []
+        items.tracklines = []
+        items.pointMarkers = []
+      }
+
+      function setData(obj) {
+        if (this.items.markers && this.items.markers.length) {
+          //   console.log('marker is', this.items.marker.options.icon)
+          this.items.marker.remove()
+          this.items.layer.remove()
+        }
+        prsMapData = obj
+        changeMap()
+      }
+
+      function changeMap() {
+        let seatrialData = prsMapData
+        // console.log(map)
+        // console.log(this.mapData)
+
+        var iconMaker = encodeURIComponent(`<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+          <svg width="100%" height="100%" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+          <path d="M4.784,13.635c0,0 -0.106,-2.924 0.006,-4.379c0.115,-1.502 0.318,-3.151 0.686,-4.632c0.163,-0.654 0.45,-1.623 0.755,-2.44c0.202,-0.54 0.407,-1.021 0.554,-1.352c0.038,-0.085 0.122,-0.139 0.215,-0.139c0.092,0 0.176,0.054 0.214,0.139c0.151,0.342 0.361,0.835 0.555,1.352c0.305,0.817 0.592,1.786 0.755,2.44c0.368,1.481 0.571,3.13 0.686,4.632c0.112,1.455 0.006,4.379 0.006,4.379l-4.432,0Z" style="fill:rgb(0,46,252);"/><path d="M5.481,12.731c0,0 -0.073,-3.048 0.003,-4.22c0.06,-0.909 0.886,-3.522 1.293,-4.764c0.03,-0.098 0.121,-0.165 0.223,-0.165c0.103,0 0.193,0.067 0.224,0.164c0.406,1.243 1.232,3.856 1.292,4.765c0.076,1.172 0.003,4.22 0.003,4.22l-3.038,0Z" style="fill:rgb(255,255,255);fill-opacity:0.846008;"/>
+      </svg>`)
+        var makerIconUrl = `data:image/svg+xml;utf8,${iconMaker}`
+
+        this.boatIcon = L.icon({
+          iconUrl: makerIconUrl,
+          iconSize: [24, 24],
+          iconAnchor: [12, 12],
+          popupAnchor: [0, 0]
+        })
+        this.items.markers = []
+        let updateIconStyle = () => {
+          for (let marker of this.items.markers) {
+            let icon = marker._icon
+            if (!icon) continue
+
+            let heading = icon.getAttribute('data-heading')
+            if (icon.style.transform.indexOf('rotateZ') === -1) {
+              icon.style.transform = `${icon.style.transform} rotateZ(${heading || 0}deg)`
+              icon.style.transformOrigin = 'center'
+            }
+          }
+        }
+        try {
+          let hue = 0
+          for (let boatName of Object.keys(seatrialData)) {
+            hue = (hue + 60) % 360
+
+            let boat = seatrialData[boatName]
+            // 라인 그리기
+            this.items.layer = L.polyline(boat.track, {
+              color: `hsl(${hue}, 100%, 45%)`,
+              weight: 2
+            }).addTo(mapData)
+
+            this.items.marker = L.marker(boat.track[boat.track.length - 1], {
+              icon: this.boatIcon
+            }).addTo(mapData)
+
+            // console.log(layer, marker)
+
+            this.items.layer.on('mouseover', function() {
+              this.items.marker.openPopup()
+              this.items.layer.setStyle({
+                weight: 4
+              })
+            })
+
+            this.items.layer.on('mouseout', function() {
+              this.items.marker.closePopup()
+              this.items.layer.setStyle({
+                weight: 2
+              })
+            })
+
+            this.items.marker.on('mouseover', function() {
+              this.items.marker.openPopup()
+              this.items.layer.setStyle({
+                weight: 4
+              })
+            })
+
+            this.items.marker.on('mouseout', function() {
+              this.items.marker.closePopup()
+              this.items.layer.setStyle({
+                weight: 2
+              })
+            })
+
+            this.items.markers.push(this.items.marker)
+            this.items.marker._icon.setAttribute('data-heading', boat.heading)
+            this.items.marker.bindPopup(boatName)
+
+            // console.log(this.items.markers)
+
+            updateIconStyle()
+          }
+        } catch (error) {
+          console.error(`Error querying boats: ${error.message}`)
+        }
+
+        // Handle some events. We need to update the rotation of icons ideally each time
+        // leaflet re-renders. them.
+        // map.on('zoom', updateIconStyle);
+        // map.on('zoomend', updateIconStyle);
+        // map.on('viewreset', updateIconStyle);
+      }
+    </script>
+  </head>
+  <!-- <body class="body_scroll"> -->
+  <body>
+    <div id="windy" style="width: 100%; height: 95vh; margin: auto"></div>
+  </body>
+</html>

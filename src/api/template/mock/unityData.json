@@ -1,0 +1,240 @@
+{
+    "data": [
+      {
+        "coordinates": {
+          "xaxis": "1790",
+          "width": "85.81802368164062",
+          "yaxis": "365",
+          "height": "54.95931625366211"
+        },
+        "info": {
+          "buyPrice": "1004",
+          "repairYn": "Y",
+          "buyPlace": "구매장소",
+          "calibrationDt": "2021-06-07",
+          "insertDt": "2021-06-21 15:15:36",
+          "modelNm": "h-duflex404",
+          "calibrationCycle": "교정주기",
+          "itemCd": "1",
+          "repairMemo": "수리중",
+          "updateDt": null,
+          "itemNm": "무전기1-1",
+          "buyDt": "2021-06-07",
+          "durable": "2021-06-07",
+          "updateId": null,
+          "buySubject": "구매주체",
+          "assetNum": "1111",
+          "repairPrice": "100",
+          "itemGrpNm": "무전기",
+          "assetRegist": "Y",
+          "itemGrpCd": "1",
+          "repairDt": "2021-06-07",
+          "insertId": "admin"
+        }
+      },
+      {
+        "coordinates": {
+          "xaxis": "208",
+          "width": "106",
+          "yaxis": "832",
+          "height": "109"
+        },
+        "info": {
+          "buyPrice": "1004",
+          "repairYn": "Y",
+          "buyPlace": "구매장소",
+          "calibrationDt": "2021-06-07",
+          "insertDt": "2021-06-21 15:15:36",
+          "modelNm": "무전기박스1-2",
+          "calibrationCycle": "교정주기",
+          "itemCd": "4",
+          "repairMemo": "수리중",
+          "updateDt": null,
+          "itemNm": "무전기박스1-2",
+          "buyDt": "2021-06-07",
+          "durable": "2021-06-07",
+          "updateId": null,
+          "buySubject": "구매주체",
+          "assetNum": "1111",
+          "repairPrice": "100",
+          "itemGrpNm": "무전기 박스",
+          "assetRegist": "Y",
+          "itemGrpCd": "2",
+          "repairDt": "2021-06-07",
+          "insertId": "admin"
+        }
+      },
+      {
+        "coordinates": {
+          "xaxis": "1569",
+          "width": "117.39112091064453",
+          "yaxis": "422",
+          "height": "68.46002960205078"
+        },
+        "info": {
+          "buyPrice": "1004",
+          "repairYn": "Y",
+          "buyPlace": "구매장소",
+          "calibrationDt": "2021-06-07",
+          "insertDt": "2021-06-22 13:04:33",
+          "modelNm": "무전기박스1-1",
+          "calibrationCycle": "교정주기",
+          "itemCd": "3",
+          "repairMemo": "수리중",
+          "updateDt": null,
+          "itemNm": "무전기박스1-1",
+          "buyDt": "2021-06-07",
+          "durable": "2021-06-07",
+          "updateId": null,
+          "buySubject": "구매주체",
+          "assetNum": "1111",
+          "repairPrice": "100",
+          "itemGrpNm": "무전기 박스",
+          "assetRegist": "Y",
+          "itemGrpCd": "2",
+          "repairDt": "2021-06-07",
+          "insertId": "admin"
+        }
+      },
+      {
+        "coordinates": {
+          "xaxis": "456",
+          "width": "220.50233459472656",
+          "yaxis": "887",
+          "height": "99.37482452392578"
+        },
+        "info": {
+          "buyPrice": "1004",
+          "repairYn": "Y",
+          "buyPlace": "구매장소",
+          "calibrationDt": "2021-06-07",
+          "insertDt": "2021-06-21 15:15:36",
+          "modelNm": "라돈측정기1-1",
+          "calibrationCycle": "교정주기",
+          "itemCd": "8",
+          "repairMemo": "수리중",
+          "updateDt": null,
+          "itemNm": "라돈측정기1-1",
+          "buyDt": "2021-06-07",
+          "durable": "2021-06-07",
+          "updateId": null,
+          "buySubject": "구매주체",
+          "assetNum": "1111",
+          "repairPrice": "100",
+          "itemGrpNm": "라돈 측정기",
+          "assetRegist": "Y",
+          "itemGrpCd": "43",
+          "repairDt": "2021-06-07",
+          "insertId": "admin"
+        }
+      },
+      {
+        "coordinates": {
+          "xaxis": "316",
+          "width": "168.71060180664062",
+          "yaxis": "888",
+          "height": "81.708984375"
+        },
+        "info": {
+          "buyPrice": "100411",
+          "repairYn": "Y",
+          "buyPlace": "구매장소",
+          "calibrationDt": "2021-06-16",
+          "insertDt": "2021-06-21 15:15:36",
+          "modelNm": "라돈측정기1-2",
+          "calibrationCycle": "교정주기",
+          "itemCd": "9",
+          "repairMemo": "수리중",
+          "updateDt": null,
+          "itemNm": "라돈측정기1-2",
+          "buyDt": "2021-06-08",
+          "durable": "2021-06-30",
+          "updateId": null,
+          "buySubject": "구매주체",
+          "assetNum": "1111",
+          "repairPrice": "100",
+          "itemGrpNm": "라돈 측정기",
+          "assetRegist": "Y",
+          "itemGrpCd": "43",
+          "repairDt": "2021-06-17",
+          "insertId": "admin"
+        }
+      },
+      {
+        "coordinates": {
+          "xaxis": "1114",
+          "width": "314.5081787109375",
+          "yaxis": "348",
+          "height": "140.3281707763672"
+        },
+        "info": {
+          "buyPrice": "1004",
+          "repairYn": "Y",
+          "buyPlace": "구매장소",
+          "calibrationDt": "2021-06-07",
+          "insertDt": "2021-06-22 18:48:35",
+          "modelNm": "확성기(대)1-1",
+          "calibrationCycle": "교정주기",
+          "itemCd": "10",
+          "repairMemo": "수리중",
+          "updateDt": null,
+          "itemNm": "확성기(대)1-1",
+          "buyDt": "2021-06-07",
+          "durable": "2021-06-07",
+          "updateId": null,
+          "buySubject": "구매주체",
+          "assetNum": "1111",
+          "repairPrice": "100",
+          "itemGrpNm": "확성기(대)",
+          "assetRegist": "Y",
+          "itemGrpCd": "44",
+          "repairDt": "2021-06-07",
+          "insertId": "admin"
+        }
+      },
+      {
+        "coordinates": {
+          "xaxis": "1119",
+          "width": "276.14447021484375",
+          "yaxis": "539",
+          "height": "142.6329803466797"
+        },
+        "info": {
+          "buyPrice": "1004",
+          "repairYn": "Y",
+          "buyPlace": "구매장소",
+          "calibrationDt": "2021-06-07",
+          "insertDt": "2021-06-22 18:50:25",
+          "modelNm": "확성기(소)1-2",
+          "calibrationCycle": "교정주기",
+          "itemCd": "13",
+          "repairMemo": "수리중",
+          "updateDt": null,
+          "itemNm": "확성기(소)1-2",
+          "buyDt": "2021-06-07",
+          "durable": "2021-06-07",
+          "updateId": null,
+          "buySubject": "구매주체",
+          "assetNum": "1111",
+          "repairPrice": "100",
+          "itemGrpNm": "확성기(소)",
+          "assetRegist": "Y",
+          "itemGrpCd": "45",
+          "repairDt": "2021-06-07",
+          "insertId": "admin"
+        }
+      }
+    ],
+    "detecting_num": {
+      "1": "5",
+      "2": "2",
+      "43": "2",
+      "44": "1",
+      "45": "1",
+      "total_num": "11"
+    },
+    "resolution": {
+      "width": "1920",
+      "height": "1080"
+    }
+  }

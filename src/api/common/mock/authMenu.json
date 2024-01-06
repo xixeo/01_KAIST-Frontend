@@ -1,0 +1,394 @@
+{
+  "admin": {
+    "userId": "admin",
+    "menuList": [
+      {
+        "domainCd": "a",
+        "menuCd": "MENU001",
+        "menuNm": "메인화면",
+        "sort": 1,
+        "icon": "menu01",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU002",
+        "menuNm": "시스템관리",
+        "sort": 2,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU003",
+        "menuNm": "메뉴 관리",
+        "prntsCd": "MENU002",
+        "sort": 2,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "id": "MENU004",
+        "domainCd": "a",
+        "menuCd": "MENU004",
+        "menuNm": "템플릿",
+        "sort": 3,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE001",
+        "menuNm": "DevExtreme",
+        "prntsCd": "MENU004",
+        "sort": 1,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE_DEVEXTREME_001",
+        "menuNm": "그리드",
+        "prntsCd": "TEMPLATE001",
+        "sort": 1,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE_DEVEXTREME_002",
+        "menuNm": "버튼",
+        "prntsCd": "TEMPLATE001",
+        "sort": 2,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE_DEVEXTREME_003",
+        "menuNm": "차트",
+        "prntsCd": "TEMPLATE001",
+        "sort": 3,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE002",
+        "menuNm": "EChart",
+        "prntsCd": "MENU004",
+        "sort": 2,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE003",
+        "menuNm": "ElementUI",
+        "prntsCd": "MENU004",
+        "sort": 3,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE004",
+        "menuNm": "gisMap",
+        "prntsCd": "MENU004",
+        "sort": 4,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE018",
+        "menuNm": "openlayer",
+        "prntsCd": "TEMPLATE004",
+        "sort": 1,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE019",
+        "menuNm": "windy",
+        "prntsCd": "TEMPLATE004",
+        "sort": 2,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE005",
+        "menuNm": "Embed템플릿",
+        "prntsCd": "MENU004",
+        "sort": 5,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE006",
+        "menuNm": "itemList",
+        "prntsCd": "MENU004",
+        "sort": 6,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE007",
+        "menuNm": "수직 이미지 스크롤바",
+        "prntsCd": "MENU004",
+        "sort": 7,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE008",
+        "menuNm": "팝업 테이블",
+        "prntsCd": "MENU004",
+        "sort": 8,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE009",
+        "menuNm": "기상",
+        "prntsCd": "MENU004",
+        "sort": 9,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "id": "TEMPLATE010",
+        "domainCd": "a",
+        "menuCd": "TEMPLATE010",
+        "prntsCd": "MENU004",
+        "menuNm": "pdf",
+        "sort": 10,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE011",
+        "menuNm": "pdf뷰어(IFrame)",
+        "prntsCd": "TEMPLATE010",
+        "sort": 1,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE012",
+        "menuNm": "pdf뷰어",
+        "prntsCd": "TEMPLATE010",
+        "sort": 2,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE013",
+        "menuNm": "pdf저장",
+        "prntsCd": "TEMPLATE010",
+        "sort": 3,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE014",
+        "menuNm": "3D",
+        "prntsCd": "MENU004",
+        "sort": 11,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "id": "TEMPLATE015",
+        "domainCd": "a",
+        "menuCd": "TEMPLATE015",
+        "prntsCd": "MENU004",
+        "menuNm": "editor",
+        "sort": 12,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE016",
+        "menuNm": "html editor",
+        "prntsCd": "TEMPLATE015",
+        "sort": 1,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE017",
+        "menuNm": "json editor",
+        "prntsCd": "TEMPLATE015",
+        "sort": 1,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE020",
+        "menuNm": "apiTest",
+        "prntsCd": "MENU004",
+        "sort": 11,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "TEMPLATE021",
+        "menuNm": "report",
+        "prntsCd": "MENU004",
+        "sort": 12,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU013",
+        "menuNm": "도메인관리",
+        "prntsCd": "MENU002",
+        "sort": 1,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU014",
+        "menuNm": "공통코드관리",
+        "prntsCd": "MENU002",
+        "sort": 3,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU015",
+        "menuNm": "사용자관리",
+        "prntsCd": "MENU002",
+        "sort": 4,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU016",
+        "menuNm": "사용자관리",
+        "prntsCd": "MENU015",
+        "sort": 1,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU017",
+        "menuNm": "조직관리",
+        "prntsCd": "MENU015",
+        "sort": 2,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU018",
+        "menuNm": "권한관리",
+        "prntsCd": "MENU002",
+        "sort": 5,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU019",
+        "menuNm": "권한그룹관리",
+        "prntsCd": "MENU018",
+        "sort": 1,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU020",
+        "menuNm": "사용자별권한",
+        "prntsCd": "MENU018",
+        "sort": 2,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU021",
+        "menuNm": "권한그룹별메뉴권한",
+        "prntsCd": "MENU018",
+        "sort": 3,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU022",
+        "menuNm": "사용자별메뉴권한",
+        "prntsCd": "MENU018",
+        "sort": 4,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU023",
+        "menuNm": "이력관리",
+        "prntsCd": "MENU002",
+        "sort": 6,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU024",
+        "menuNm": "사용자접속이력",
+        "prntsCd": "MENU023",
+        "sort": 1,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU025",
+        "menuNm": "권한그룹이력",
+        "prntsCd": "MENU023",
+        "sort": 2,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU026",
+        "menuNm": "권한별사용자이력",
+        "prntsCd": "MENU023",
+        "sort": 3,
+        "icon": "",
+        "useYn": "Y"
+      },
+      {
+        "domainCd": "a",
+        "menuCd": "MENU027",
+        "menuNm": "권한그룹별메뉴권한이력",
+        "prntsCd": "MENU023",
+        "sort": 4,
+        "icon": "",
+        "useYn": "Y"
+      }
+    ]
+  }
+}

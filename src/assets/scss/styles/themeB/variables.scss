@@ -1,0 +1,119 @@
+// base color
+$light-blue: #3a71a8;
+$light-blue-hover: #326292;
+$blue: #324157;
+$red: #c03639;
+$pink: #e65d6e;
+$green: #30b08f;
+$tiffany: #4ab7bd;
+$yellow: #fec171;
+$panGreen: #30b08f;
+$black: #000;
+
+$base-bar-bg-color: #252836;
+$base-body-bg-color: #252836;
+$base-body-hover-color: #494a4c;
+$base-bg-default-color: #f4f4f5;
+$base-active-color: #ea7c69;
+$base-text-color: #fff;
+$base-text-default-color: #fff;
+$base-grid-header-color: rgba(255, 255, 255, 0.05); // #181920;
+$base-box-border-color: #e3e8ee;
+$base-shadow-color: $black;
+$base-sidebar-bg-color: rgb(37, 32, 46);
+
+$button-orange: #ea7c69;
+$button-orange-hover: #ea6c66;
+
+// sidebar by lyj
+$menuText: $base-bg-default-color;
+$menuActiveText: $base-active-color;
+$menuBg: #1f1d2b; // 사이드바 배경 색깔
+$topSubmenu: linear-gradient(0deg, rgba(245, 105, 61, 10) 60%, rgba(244, 91, 50, 0.1) 10%); // 사이드바 최상위 메뉴 색깔
+$menuHover: rgba(31, 29, 43, 1); // 사이드바 hover 색깔
+
+$subMenuActiveText: $base-bg-default-color; // https://github.com/ElemeFE/element/issues/12951
+$subMenuBg: rgba(31, 29, 43, 1);
+$subMenuHover: rgba(31, 29, 43, 1);
+
+$sideBarWidth: 240px;
+
+$ret-box: $base-bg-default-color !default; //조회 box color
+$ret-box_border: $base-box-border-color !default; //조회 box border color
+
+$content-card: $base-bg-default-color !default; //content-card
+$content-box_border: $base-box-border-color !default; //content box border color
+
+$box-color: $base-bg-default-color !default; //box color
+$box_border: $base-box-border-color !default; //box border color
+
+// NAV Bar
+$navbar-bg: rgba(31, 29, 43, 1) !default; // Navbar 배경 색깔 by lyj
+$navbar-item-color: $base-bg-default-color !default; // Navbar 아이템 글자 색깔
+$navbar-height: 50px !default; //Navbar height
+
+// Tag Viewer
+$tagview-bg: $base-bar-bg-color !default; // tagView 배경 색깔
+$tagview-height: 34px !default; // tagView height
+$tagview-item-default-color: transparent !default; // tagView 아이템 색상
+$tagview-item-default-text-color: $base-active-color !default; // tagView 아이템 글자 색상
+$tagview-item-active-color: $base-active-color !default; // tagView 아이템 활성화(선택) 색상
+$tagview-item-active-text-color: $base-bg-default-color !default; // tagView 아이템 활성화(선택) 글자 색상
+
+// MAIN HEADER
+$main-header-height: $navbar-height; // 헤더 높이
+$main-footer-height: $tagview-height; // footer 높이
+
+$spacer: 1rem !default;
+$navbar-padding-x: ($spacer / 2) !default;
+
+// Content padding
+$content-padding-x: $navbar-padding-x !default;
+
+// 메인 배경 색깔
+$main-bg: $base-body-bg-color !default;
+
+$content-padding-y: 0 !default;
+$content-padding-x: $navbar-padding-x !default;
+
+// Grid
+$grid-header-bg: $base-grid-header-color;
+$grid-header-color: $base-bg-default-color;
+
+$border-radius: 0.25rem !default;
+$border-radius-lg: 0.3rem !default;
+$border-radius-sm: 0.2rem !default;
+
+@font-face {
+  font-family: 'hhiMedium';
+  src: require('@/assets/font/hhiMedium.woff'), require('@/assets/font/hhiMedium.otf') format('woff'); // format('opentype');
+  unicode-range: U+AC00- U+D7A3, U+0030-0039; // 범위 : 한글, 숫자
+}
+
+@font-face {
+  font-family: 'hhiBold';
+  src: require('@/assets/font/hhiBold.woff'), require('@/assets/font/hhiBold.otf') format('woff'); // format('truopentypeetype');
+}
+
+@font-face {
+  font-family: 'hhiLight';
+  src: require('@/assets/font/hhiLight.woff'), require('@/assets/font/hhiLight.otf') format('woff');
+}
+
+$font-normal: hhiMedium, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+$font-aside: hhiLight, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$font-bold: hhiBold, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+$font-light: hhiLight, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}

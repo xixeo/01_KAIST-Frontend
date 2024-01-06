@@ -1,0 +1,93 @@
+{
+    "success": true,
+    "code": 200,
+    "msg": "성공하였습니다.",
+    "list": [
+        {
+            "headcaption": "label.devID",
+            "field": "device_id",
+            "fieldtype": "string",
+            "format": "",
+            "alignment": "center",
+            "width": "200",
+            "max": 50,
+            "editoroptions": {
+                "format": ""
+            },
+            "required": false,
+            "fixed": false
+        },
+        {
+            "headcaption": "label.devNM",
+            "field": "device_nm",
+            "fieldtype": "string",
+            "format": "",
+            "alignment": "center",
+            "width": "200",
+            "max": 50,
+            "editoroptions": {
+                "format": ""
+            },
+            "required": false,
+            "fixed": false
+        },
+        {
+            "headcaption": "label.devUniqueID",
+            "field": "device_unique_id",
+            "fieldtype": "string",
+            "format": "",
+            "alignment": "center",
+            "width": "200",
+            "max": 50,
+            "editoroptions": {
+                "format": ""
+            },
+            "required": false,
+            "fixed": false
+        },
+        {
+            "headcaption": "label.devType",
+            "field": "device_type",
+            "fieldtype": "string",
+            "format": "",
+            "alignment": "center",
+            "width": "200",
+            "max": 50,
+            "editoroptions": {
+                "format": ""
+            },
+            "required": false,
+            "fixed": false
+        },
+        {
+            "headcaption": "label.devGroupNM",
+            "field": "device_grp_nm",
+            "fieldtype": "string",
+            "format": "",
+            "alignment": "center",
+            "width": "200",
+            "max": 50,
+            "editoroptions": {
+                "format": ""
+            },
+            "required": false,
+            "fixed": false
+        },
+        {
+            "headcaption": "label.send_data",
+            "value": "view",
+            "field": "sendData",
+            "fieldtype": "string",
+            "format": "",
+            "alignment": "center",
+            "width": "110",
+            "max": 20,
+            "editoroptions": {
+                "format": ""
+            },
+            "required": false,
+            "fixed": false,
+            "button": true
+        }
+    ]
+}

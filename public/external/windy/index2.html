@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+    <title>Windy System</title>
+    <style type="text/css">
+      .leaflet-popup-content-wrapper,
+      .leaflet-popup-tip {
+        background-color: rgba(255, 255, 255, 0.5) !important;
+      }
+
+      a.leaflet-popup-close-button {
+        color: black !important;
+      }
+
+      .ship-label {
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        color: blue !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+      }
+
+      .ship-label:before {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <!-- <body class="body_scroll"> -->
+
+  <body style="margin: 0">
+    <div id="windy" style="width: 100%; height: 100vh; margin: 0; padding: 0"></div>
+  </body>
+
+  <script>
+    let options = {
+      // Required: API key
+      key: 'YCbF3pW89jKgTY2cROcxt8EZS6EdAwyx',
+      verbose: false,
+      lat: 34.6,
+      lon: 128.9,
+      zoom: 9
+    }
+    let id = null
+
+    let markers = []
+    let tracklines = []
+    let pointMarkers = []
+    let mapApi = {}
+    let mapdata = {}
+    let isShowShipSpeed = true
+    let isShowPopup = true
+
+    function init(obj) {
+      options = obj
+      windyInit(options, windyAPI => {
+        const { map } = windyAPI
+        mapApi = map
+        window.parent.postMessage(
+          {
+            id: id,
+            msg: 'windy init'
+          },
+          '*'
+        )
+      })
+    }
+
+    function setID(obj) {
+      id = obj
+    }
+
+    function setMapData(prsMapData) {
+      // console.log(prsMapData);
+      mapdata = prsMapData === undefined ? mapdata : prsMapData
+      if (clear()) {
+        drawMap()
+      }
+    }
+
+    function setIsShowShipSpeed(prsShowShipSpeed) {
+      isShowShipSpeed = prsShowShipSpeed === undefined ? isShowShipSpeed : prsShowShipSpeed
+    }
+
+    function setIsShowPopup(prsShowPopup) {
+      isShowPopup = prsShowPopup === undefined ? isShowPopup : prsShowPopup
+    }
+
+    function clear() {
+      if (markers.length) {
+        for (let item of markers) {
+          item.remove()
+        }
+      }
+      if (tracklines.length) {
+        for (let item of tracklines) {
+          item.remove()
+        }
+      }
+      if (pointMarkers.length) {
+        for (let item of pointMarkers) {
+          item.remove()
+        }
+      }
+      markers = []
+      tracklines = []
+      pointMarkers = []
+
+      return true
+    }
+
+    function drawMap() {
+      let seatrialData = mapdata
+      let updateIconStyle = () => {
+        for (let item of markers) {
+          let icon = item._icon
+
+          if (icon) {
+            let heading = icon.getAttribute('data-heading')
+            if (icon.style.transform.indexOf('rotateZ') === -1) {
+              icon.style.transform = `${icon.style.transform} rotateZ(${heading || 0}deg)`
+              icon.style.transformOrigin = 'center'
+            }
+          }
+        }
+      }
+
+      try {
+        let hue = 0
+        for (let shipNo of Object.keys(seatrialData)) {
+          hue = (hue + 60) % 360
+          let ship = seatrialData[shipNo]
+          let trackline = L.polyline(ship.track, {
+            color: `hsl(${hue}, 100%, 45%)`,
+            weight: 2
+          }).addTo(mapApi)
+          tracklines.push(trackline)
+
+          for (let i = 0; i < ship.track.length - 1; i++) {
+            let circleMarker = encodeURIComponent(`<?xml version="1.0" encoding="UTF-8"?>
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  width="24" height="24" viewBox="0 0 24 24">
+            <path fill="hsl(${hue}, 100%, 45%)" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+            </svg>`)
+
+            let CIRCLE_MARKER_ICON_URL = `data:image/svg+xml;utf8,${circleMarker}`
+
+            let circleMarkerIcon = L.icon({
+              iconUrl: CIRCLE_MARKER_ICON_URL,
+              iconSize: [10, 10],
+              iconAnchor: [5, 5],
+              popupAnchor: [0, 0]
+            })
+
+            let pointMarker = L.marker(ship.track[i], {
+              icon: circleMarkerIcon
+            }).addTo(mapApi)
+            pointMarkers.push(pointMarker)
+
+            if (isShowPopup) {
+              let popupContent = ''
+              popupContent += 'No : ' + shipNo + '<br/>'
+              popupContent += 'Name : ' + ship.shipName + '<br/>'
+              popupContent += 'Heading : ' + ship.heading[i] + ' ˚' + '<br/>'
+              popupContent += 'Distance : ' + ship.distance[i] + ' NM' + '<br/>'
+              popupContent += 'Speed : ' + ship.shipSpeed[i] + ' knot' + '<br/>'
+              popupContent += 'Gps : ' + ship.track[i][0] + ', ' + ship.track[i][1] + '<br/>'
+              popupContent += 'Timestamp : ' + ship.timestamp[i]
+
+              pointMarker.bindPopup(popupContent)
+            }
+          }
+
+          let boatIconStop = {
+            iconUrl: './icon/windyIconShadow2-1.png',
+            iconSize: [30, 170],
+            iconAnchor: [15, 85],
+            popupAnchor: [0, 0]
+          }
+
+          let boatIconSlow = {
+            iconUrl: './icon/windyIconShadow2-2.png',
+            iconSize: [30, 170],
+            iconAnchor: [15, 85],
+            popupAnchor: [0, 0]
+          }
+
+          let boatIconFast = {
+            iconUrl: './icon/windyIconShadow2-3.png',
+            iconSize: [30, 170],
+            iconAnchor: [15, 85],
+            popupAnchor: [0, 0]
+          }
+
+          let iconTemp = {}
+
+          if (isShowShipSpeed) {
+            if (ship.shipSpeed[ship.track.length - 1] <= 0) {
+              iconTemp = boatIconStop
+            } else if (ship.shipSpeed[ship.track.length - 1] <= 10) {
+              iconTemp = boatIconSlow
+            } else {
+              iconTemp = boatIconFast
+            }
+          } else {
+            iconTemp = boatIconStop
+          }
+
+          let boatIcon = L.icon(iconTemp)
+          let marker = L.marker(ship.track[ship.track.length - 1], {
+            icon: boatIcon
+          }).addTo(mapApi)
+
+          marker.bindTooltip(shipNo, {
+            permanent: true,
+            className: 'ship-label',
+            offset: [5, -2]
+          })
+
+          marker._icon.setAttribute('data-heading', ship.heading[ship.track.length - 1])
+          markers.push(marker)
+          if (isShowPopup) {
+            let popupContent = ''
+            popupContent += 'No : ' + shipNo + '<br/>'
+            popupContent += 'Name : ' + ship.shipName + '<br/>'
+            popupContent += 'Heading : ' + ship.heading[ship.track.length - 1] + ' ˚' + '<br/>'
+            popupContent += 'Distance : ' + ship.distance[ship.track.length - 1] + ' NM' + '<br/>'
+            popupContent += 'Speed : ' + ship.shipSpeed[ship.track.length - 1] + ' knot' + '<br/>'
+            popupContent += 'Gps : ' + ship.track[ship.track.length - 1][0] + ', '
+            popupContent += ship.track[ship.track.length - 1][1] + '<br/>'
+            popupContent += 'Timestamp : ' + ship.timestamp[ship.track.length - 1]
+
+            marker.bindPopup(popupContent)
+          }
+          marker.openPopup()
+
+          updateIconStyle()
+        }
+      } catch (error) {
+        console.error(`Error querying boats: ${error.message}`)
+      }
+    }
+  </script>
+</html>

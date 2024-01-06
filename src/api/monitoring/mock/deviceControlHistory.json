@@ -1,0 +1,24 @@
+{
+    "list": [
+        {
+            "clientId": "yunju_test_client",
+            "qos": 1,
+            "topic": "test/1",
+            "payload": "{\"data1\":  [    {      \"device_type\": \"type1\",      \"measure_dtm\": \"20210917133907\"}  ]} ",
+            "result": "Y",
+            "insertDt": "2021-09-30 10:42:56.571715",
+            "insertId": "/api/v1/publish-mqtt",
+            "cause": ""
+        },
+        {
+            "clientId": "yunju_test_client",
+            "qos": 1,
+            "topic": "test/1",
+            "payload": "{\"data2\":  [    {      \"device_type\": \"type1\",      \"measure_dtm\": \"20210917133907\"}  ]} ",
+            "result": "Y",
+            "insertDt": "2021-09-30 10:42:56.688298",
+            "insertId": "/api/v1/publish-mqtt",
+            "cause": ""
+        }
+    ]
+}

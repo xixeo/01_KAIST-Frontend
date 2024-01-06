@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title>OZ Viewer ActiveX</title>
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" type="text/css" />
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="ozhviewer/ui.dynatree.css" type="text/css" />
+    <script type="text/javascript" src="ozhviewer/jquery.dynatree.js" charset="utf-8"></script>
+    <script type="text/javascript" src="ozhviewer/OZJSViewer.js" charset="utf-8"></script>
+  </head>
+  <!-- <body class="body_scroll"> -->
+  <body>
+    <div id="OZViewer" style="width:100%;height:100%"></div>
+    <script type="text/javascript">
+      var reportName = ''
+      var argsList = []
+      var serverAddr = null
+      var ozrName = null
+      var ozdName = null
+      function setServerInfo(obj) {
+        serverAddr = obj
+      }
+
+      // 파일 경로 포함해서 입력해야 함
+      function setOzrFile(obj) {
+        ozrName = obj
+      }
+
+      // ozd 파일 경로 포함해서 입력해야 함
+      function setOzdFile(obj) {
+        ozdName = obj
+      }
+
+      function init(obj) {
+        setServerInfo(obj.serverUrl)
+        setOzrFile(obj.ozrFile)
+        setOzdFile(obj.ozdFile)
+        start_ozjs('OZViewer', 'ozhviewer/')
+      }
+
+      function SetOZParamters_OZViewer() {
+        var oz = document.getElementById('OZViewer')
+        if (serverAddr) oz.sendToActionScript('connection.servlet', serverAddr) // oz 서버 연결 주소
+        // oz.sendToActionScript('connection.servlet', 'http://210.118.131.68:7031/server')
+        // oz.sendToActionScript('connection.servlet', 'http://localhost:8080/external/ozreport/file')
+        // oz.sendToActionScript("connection.reportname","HMDPSDS/facilityManageStandard.ozr");
+        if (ozrName) oz.sendToActionScript('connection.reportname', ozrName) // oz 서버상에 존재하는 파일
+        if (ozdName) oz.sendToActionScript('connection.openfile', ozdName) // 로컬 파일??
+        return true
+      }
+      // init()
+    </script>
+  </body>
+</html>

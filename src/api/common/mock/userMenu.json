@@ -1,0 +1,122 @@
+{
+  "admin": {
+    "userId": "admin",
+    "treeMenus": [
+      {
+        "id": "MENU001",
+        "level": 0,
+        "menuCd": "MENU001",
+        "menuNm": "대시보드",
+        "open": true,
+        "sort": 1,
+        "icon": "menu01",
+        "useYn": "Y",
+        "menuPath": "main",
+        "children": []
+      },
+      {
+        "id": "MENU003",
+        "level": 0,
+        "menuCd": "MENU003",
+        "menuNm": "Device 이력",
+        "open": true,
+        "sort": 2,
+        "icon": "",
+        "useYn": "Y",
+        "menuPath": "monitoring",
+        "children": [
+          {
+            "children": [],
+            "id": "MENU031",
+            "level": 1,
+            "menuCd": "MENU031",
+            "menuNm": "Device 수신 이력",
+            "open": true,
+            "prntsCd": "MENU003",
+            "sort": 1,
+            "icon": "",
+            "useYn": "Y",
+            "menuPath": "deviceHistory"
+          },
+          {
+            "children": [],
+            "id": "MENU032",
+            "level": 1,
+            "menuCd": "MENU032",
+            "menuNm": "Device 최종 이력",
+            "open": true,
+            "prntsCd": "MENU003",
+            "sort": 2,
+            "icon": "",
+            "useYn": "Y",
+            "menuPath": "deviceLastHistory"
+          },
+          {
+            "children": [],
+            "id": "MENU033",
+            "level": 1,
+            "menuCd": "MENU033",
+            "menuNm": "Device 제어 이력",
+            "open": true,
+            "prntsCd": "MENU003",
+            "sort": 3,
+            "icon": "",
+            "useYn": "Y",
+            "menuPath": "deviceControlHistory"
+          }
+        ]
+      },
+      {
+        "id": "MENU004",
+        "level": 0,
+        "menuCd": "MENU004",
+        "menuNm": "기준 정보",
+        "open": true,
+        "sort": 3,
+        "icon": "",
+        "useYn": "Y",
+        "menuPath": "template",
+        "children": [
+          {
+            "id": "MENU042",
+            "level": 1,
+            "menuCd": "MENU042",
+            "menuNm": "Device 기기 관리",
+            "open": true,
+            "prntsCd": "MENU004",
+            "sort": 1,
+            "icon": "",
+            "useYn": "Y",
+            "menuPath": "deviceManager"
+          },
+          {
+            "children": [],
+            "id": "MENU041",
+            "level": 1,
+            "menuCd": "MENU041",
+            "menuNm": "Device 그룹 관리",
+            "open": true,
+            "prntsCd": "MENU004",
+            "sort": 2,
+            "icon": "",
+            "useYn": "Y",
+            "menuPath": "deviceGrpManager"
+          },
+          {
+            "children": [],
+            "id": "MENU043",
+            "level": 1,
+            "menuCd": "MENU043",
+            "menuNm": "Device 표시 관리",
+            "open": true,
+            "prntsCd": "MENU004",
+            "sort": 3,
+            "icon": "",
+            "useYn": "Y",
+            "menuPath": "deviceDispManager"
+          }        
+        ]
+      }
+    ]
+  }
+}

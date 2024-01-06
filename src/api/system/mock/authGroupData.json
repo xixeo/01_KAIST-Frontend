@@ -1,0 +1,64 @@
+{
+  "list": [
+    {
+        "domainCd": "a",
+        "domainNm": "domainAA",
+        "authgrpCd": "mock_A1",
+        "authgrpNm": "authGroup_A1",
+        "authgrpType": "default1",
+        "authgrpTypeNm": "사용자",
+        "useYn": "y",
+        "insertId": "system",
+        "insertDt": "2021-04-14 15:39:21",
+        "updateId": "system",
+        "updateDt": "2021-04-14 15:39:33",
+        "__created__": false,
+        "__modified__": false
+    },
+    {
+      "domainCd": "a",
+      "domainNm": "domainAA",
+      "authgrpCd": "mock_A2",
+      "authgrpNm": "authGroup_A2",
+      "authgrpType": "default2",
+      "authgrpTypeNm": "관리자",
+      "useYn": "y",
+      "insertId": "system",
+      "insertDt": "2021-04-14 15:39:21",
+      "updateId": "system",
+      "updateDt": "2021-04-14 15:39:33",
+      "__created__": false,
+      "__modified__": false
+    },
+    {
+      "domainCd": "b",
+      "domainNm": "domainBB",
+      "authgrpCd": "mock_B1",
+      "authgrpNm": "authGroup_B1",
+      "authgrpType": "default1",
+      "authgrpTypeNm": "사용자",
+      "useYn": "y",
+      "insertId": "system",
+      "insertDt": "2021-04-14 15:39:21",
+      "updateId": "system",
+      "updateDt": "2021-04-14 15:39:33",
+      "__created__": false,
+      "__modified__": false
+    },    
+    {
+      "domainCd": "c",
+      "domainNm": "domainCC",
+      "authgrpCd": "mock_C1",
+      "authgrpNm": "authGroup_C1",
+      "authgrpType": "default2",
+      "authgrpTypeNm": "관리자",
+      "useYn": "y",
+      "insertId": "system",
+      "insertDt": "2021-04-14 15:39:21",
+      "updateId": "system",
+      "updateDt": "2021-04-14 15:39:33",
+      "__created__": false,
+      "__modified__": false
+    }
+  ]
+}

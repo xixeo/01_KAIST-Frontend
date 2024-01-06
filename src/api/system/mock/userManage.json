@@ -1,0 +1,253 @@
+{
+  "list": [
+    {
+      "domainCd": "igns",
+      "userId": "admin",
+      "userNm": "관리자"
+    },
+    {
+      "domainCd": "a",
+      "userId": "system",
+      "userNm": "시스템"
+    },
+    {
+      "domainCd": "a",
+      "userId": "user_1",
+      "userNm": "사용자_1"
+    },
+    {
+      "domainCd": "a",
+      "userId": "user_2",
+      "userNm": "사용자_2"
+    },
+    {
+      "domainCd": "b",
+      "userId": "user_3",
+      "userNm": "사용자_3"
+    },
+    {
+      "domainCd": "c",
+      "userId": "user_4",
+      "userNm": "사용자_4"
+    }
+  ],
+  "asgn":[
+    { 
+      "asgnCd":"asgn001",
+      "asgnNm":"adminGroup"
+    },
+    {
+      "asgnCd":"asgn002",
+      "asgnNm":"systemGroup"
+    },
+    {
+      "asgnCd":"asgn003",
+      "asgnNm":"userGroup"
+    }
+  ],
+  "userType":[
+    {
+      "domainCd":"a",
+      "userType": "T00101",
+      "userTypeNm": "사장"
+    },
+    { "domainCd":"a",
+      "userType": "T00102",
+      "userTypeNm": "부장"
+    },
+    {
+      "domainCd":"a",
+      "userType": "T00103",
+      "userTypeNm": "차장"
+    },
+    {
+      "domainCd":"a",
+      "userType": "T00104",
+      "userTypeNm": "대리"
+    },
+    {
+      "domainCd":"a",
+      "userType": "T00105",
+      "userTypeNm": "사원"
+    },
+    {
+      "domainCd":"b",
+      "userType": "T00101",
+      "userTypeNm": "부장"
+    },
+    { "domainCd":"b",
+      "userType": "T00102",
+      "userTypeNm": "과장"
+    },
+    {
+      "domainCd":"b",
+      "userType": "T00103",
+      "userTypeNm": "대리"
+    },
+    {
+      "domainCd":"b",
+      "userType": "T00104",
+      "userTypeNm": "주임"
+    },
+    {
+      "domainCd":"b",
+      "userType": "T00105",
+      "userTypeNm": "사원"
+    },
+    {
+      "domainCd":"c",
+      "userType": "T00101",
+      "userTypeNm": "수석연구원"
+    },
+    {
+      "domainCd":"c",
+      "userType": "T00102",
+      "userTypeNm": "책임연구원"
+    },
+    {
+      "domainCd":"c",
+      "userType": "T00103",
+      "userTypeNm": "선임연구원"
+    }
+  ],
+  "data": [
+    {
+      "domainCd": "a",
+      "domainNm": "domainAAA",
+      "userId":"admin",
+      "userNm":"관리자",
+      "userNmEn":"admin",
+      "userType":"admin",
+      "asgnCd":"asgn001",
+      "asgnNm":"adminGroup",
+      "nickNm":"nick_admin",
+      "userPw":"1",
+      "userTempPw":"1234",
+      "email":"aaaaaa@naver.com",
+      "offiTel":"051-123-1234",
+      "note":"-",
+      "useYn":"Y",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin",
+      "uuid":"test-1234-test-4321-test-0000",
+      "userRole":"admin"
+    },
+    {
+      "domainCd": "a",
+      "domainNm": "domainAAA",
+      "userId":"system",
+      "userNm":"시스템",
+      "userNmEn":"system",
+      "userType":"system",
+      "asgnCd":"asgn002",
+      "asgnNm":"systemGroup",
+      "nickNm":"nick_system",
+      "userPw":"1",
+      "userTempPw":"1234",
+      "email":"system@naver.com",
+      "offiTel":"051-123-4321",
+      "note":"-",
+      "useYn":"Y",
+      "insertDt": "2020-12-01",
+      "insertId": "system",
+      "updateDt": "2021-03-19",
+      "updateId": "system",
+      "uuid":"test-4321-test-1234-test-1111",
+      "userRole":"system"
+    },
+    {
+      "domainCd": "a",
+      "domainNm": "domainAAA",
+      "userId":"user_1",
+      "userNm":"사용자_1",
+      "userNmEn":"user_1",
+      "userType":"user",
+      "asgnCd":"asgn003",
+      "asgnNm":"userGroup",
+      "nickNm":"nick_user_1",
+      "userPw":"1",
+      "userTempPw":"1234",
+      "email":"user_1@naver.com",
+      "offiTel":"051-123-1111",
+      "note":"-",
+      "useYn":"Y",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin",
+      "uuid":"test-1234-test-4321-test-0000",
+      "userRole":"user"
+    },
+    {
+      "domainCd": "a",
+      "domainNm": "domainAAA",
+      "userId":"user_2",
+      "userNm":"사용자_2",
+      "userNmEn":"user_2",
+      "userType":"user",
+      "asgnCd":"asgn003",
+      "asgnNm":"userGroup",
+      "nickNm":"nick_user_2",
+      "userPw":"1",
+      "userTempPw":"1234",
+      "email":"user_2@naver.com",
+      "offiTel":"051-123-2222",
+      "note":"-",
+      "useYn":"Y",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin",
+      "uuid":"test-1234-6789-4321-test-0000",
+      "userRole":"user"
+    },
+    {
+      "domainCd": "b",
+      "domainNm": "domainBB",
+      "userId":"user_3",
+      "userNm":"사용자_3",
+      "userNmEn":"user_3",
+      "userType":"user",
+      "asgnCd":"asgn003",
+      "asgnNm":"userGroup",
+      "nickNm":"nick_user_3",
+      "userPw":"1",
+      "userTempPw":"1234",
+      "email":"user_3@naver.com",
+      "offiTel":"051-123-3333",
+      "note":"-",
+      "useYn":"Y",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin",
+      "uuid":"test-1234-4321-test-test-0000",
+      "userRole":"user"
+    },
+    {
+      "domainCd": "c",
+      "domainNm": "domainCCV",
+      "userId":"user_4",
+      "userNm":"사용자_4",
+      "userNmEn":"user_4",
+      "userType":"user",
+      "asgnCd":"asgn003",
+      "asgnNm":"userGroup",
+      "nickNm":"nick_user_4",
+      "userPw":"1",
+      "userTempPw":"1234",
+      "email":"user_4@naver.com",
+      "offiTel":"051-123-4444",
+      "note":"-",
+      "useYn":"Y",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin",
+      "uuid":"test-4321-test-1234-test-0000",
+      "userRole":"user"
+    }
+  ]
+}

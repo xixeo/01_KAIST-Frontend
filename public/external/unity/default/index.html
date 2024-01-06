@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Unity WebGL Player | Rhinox</title>
+    <script src="static/Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance
+      var path
+      var id
+      // gameInstance = UnityLoader.instantiate("unityContainer", "static/Build/WebGLBuild.json");
+      function setPath(obj) {
+        path = obj
+        return true
+      }
+
+      function setID(obj) {
+        id = obj
+      }
+
+      function loadBuilder(obj) {
+        gameInstance = UnityLoader.instantiate('unityContainer', obj)
+      }
+
+      function fullscreen() {
+        console.log(gameInstance)
+        gameInstance.SetFullscreen(1)
+        window.parent.postMessage({ id: id, msg: 'unity fullscreen' }, '*')
+        return true
+      }
+
+      function HelloString() {
+        console.log('HelloString')
+      }
+      // gameInstance = UnityLoader.instantiate("unityContainer", path);
+    </script>
+    <script type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="unityContainer" style="width: 100%; height: 95vh; margin: auto"></div>
+  </body>
+</html>

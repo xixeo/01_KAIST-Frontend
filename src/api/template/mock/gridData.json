@@ -1,0 +1,138 @@
+{
+  "list": [
+    {
+      "id": "1",
+      "sampleCd": "001",
+      "sampleNm": "샘플1",
+      "sampleStatus": "사용",
+      "insertId": "admin",
+      "insertDt": "2021-02-20",
+      "prise": "10000"
+    },
+    {
+      "id": "2",
+      "sampleCd": "002",
+      "sampleNm": "샘플2",
+      "sampleStatus": "사용",
+      "insertId": "admin",
+      "insertDt": "2021-02-20",
+      "prise": "65000"
+    },
+    {
+      "id": "3",
+      "sampleCd": "003",
+      "sampleNm": "샘플3",
+      "sampleStatus": "사용",
+      "insertId": "admin",
+      "insertDt": "2021-02-20",
+      "prise": "2000"
+    },
+    {
+      "id": "4",
+      "sampleCd": "004",
+      "sampleNm": "샘플4",
+      "sampleStatus": "사용",
+      "insertId": "admin",
+      "insertDt": "2021-02-20",
+      "prise": "50000"
+    }
+  ],
+  "treeList": [
+    {
+      "menuCd": "MENU001",
+      "menuNm": "메인화면",
+      "sort": 1,
+      "useYn": "Y"
+    },
+    {
+      "menuCd": "MENU002",
+      "menuNm": "시스템관리",
+      "sort": 2,
+      "useYn": "Y"
+    },
+    {
+      "menuCd": "MENU003",
+      "menuNm": "메뉴관리",
+      "prntsCd": "MENU002",
+      "sort": 1,
+      "useYn": "Y"
+    },
+    {
+      "id": "MENU004",
+      "menuCd": "MENU004",
+      "menuNm": "템플릿",
+      "sort": 3,
+      "useYn": "Y"
+    },
+    {
+      "menuCd": "TEMPLATE001",
+      "menuNm": "그리드템플릿",
+      "prntsCd": "MENU004",
+      "sort": 1,
+      "useYn": "Y"
+    },
+    {
+      "menuCd": "TEMPLATE002",
+      "menuNm": "EChart템플릿",
+      "prntsCd": "MENU004",
+      "sort": 2,
+      "useYn": "Y"
+    },
+    {
+      "menuCd": "TEMPLATE003",
+      "menuNm": "ElementUI템플릿",
+      "prntsCd": "MENU004",
+      "sort": 3,
+      "useYn": "Y"
+    },
+    {
+      "menuCd": "TEMPLATE004",
+      "menuNm": "OpenLayers템플릿",
+      "prntsCd": "MENU004",
+      "sort": 4,
+      "useYn": "Y"
+    },
+    {
+      "menuCd": "TEMPLATE005",
+      "menuNm": "Embed템플릿",
+      "prntsCd": "MENU004",
+      "sort": 5,
+      "useYn": "Y"
+    },
+    {
+      "menuCd": "TEMPLATE006",
+      "menuNm": "itemList템플릿",
+      "prntsCd": "MENU004",
+      "sort": 6,
+      "useYn": "Y"
+    },
+    {
+      "menuCd": "TEMPLATE007",
+      "menuNm": "수직 이미지 스크롤바 템플릿",
+      "prntsCd": "MENU004",
+      "sort": 7,
+      "useYn": "Y"
+    },
+    {
+      "menuCd": "TEMPLATE008",
+      "menuNm": "팝업 테이블",
+      "prntsCd": "MENU004",
+      "sort": 8,
+      "useYn": "Y"
+    },
+    {
+      "menuCd": "TEMPLATE009",
+      "menuNm": "기상",
+      "prntsCd": "MENU004",
+      "sort": 9,
+      "useYn": "Y"
+    },
+    {
+      "menuCd": "TEMPLATE020",
+      "menuNm": "API템플릿",
+      "prntsCd": "MENU004",
+      "sort": 11,
+      "useYn": "Y"
+    }
+  ]
+}

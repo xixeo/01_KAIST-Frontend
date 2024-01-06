@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DefaultCompany | Unity_FrameWork</title>
+
+    <!-- Send to Unity -->
+    <div class="message-form centered">
+      <!-- <h2>Message for Unity</h2> -->
+      <!-- <input type="text" name="txtMessage" id="txtMessage" placeholder="Enter message" /> -->
+      <!-- <button onclick="sendMessageToUnityA()">SendA</button>
+      <button onclick="sendMessageToUnityB()">SendB</button>
+      <button onclick="sendMessageToUnityC()">SendC</button>
+      <button onclick="sendToUnity()">Test</button> -->
+      <button onclick="sendToUnity('test msg')">Test</button>
+    </div>
+    <!-- Exit -->
+
+    <script src="static/Build/Unityloader.js"></script>
+    <!-- <script src="static/Build/FrameWork.loader.js"></script> -->
+
+    <script>
+      var gameInstance
+      var path
+      var id
+      // gameInstance = UnityLoader.instantiate('unityContainer', 'static/Build/Build.json')
+      // gameInstance = UnityLoader.instantiate('unityContainer', 'static/Build/Rhinox.json')
+      //gameInstance = UnityLoader.instantiate('unityContainer', 'static/Build/21.6.24_Ulju.json')
+
+      function setPath(obj) {
+        path = obj
+        return true
+      }
+
+      function setID(obj) {
+        id = obj
+      }
+
+      function loadBuilder(obj) {
+        gameInstance = UnityLoader.instantiate('unityContainer', obj)
+      } 
+
+      // function loadBuilder(obj) {}
+
+      function fullscreen() {
+        console.log(gameInstance)
+        gameInstance.SetFullscreen(1)
+        window.parent.postMessage({ id: id, msg: 'unity fullscreen' }, '*')
+        return true
+      }
+
+      function receiveMessageFromUnity(obj) {
+        console.log(obj)
+      }
+      function sendMessageToUnityA() {
+        // const txtMessage = document.getElementById('txtMessage')
+
+        // const message = txtMessage.value
+        // txtMessage.value = ''
+        // message = '123'
+
+        // gameInstance.SendMessage('Bridge', 'ReceiveMessageFromPage', message)
+        // gameInstance.SendMessage('Messenger', 'ChangeColor', message)
+
+        gameInstance.SendMessage('LightColor', 'GetValue2', '{"1":"test", "2":"test"}')
+        //console.log("1")
+      }
+
+      function sendMessageToUnityB() {
+        gameInstance.SendMessage('LightColor', 'GetValue', 'E')
+      }
+
+      function sendMessageToUnityC() {
+        gameInstance.SendMessage('LightColor', 'GetValue', 'F')
+      }
+
+      // function sendToUnityCoor(){
+      //   gameInstance.SendMessage('GenerateMgr', 'GetValue', 'objBag', '0', '1.5')
+      // }
+
+      function sendToUnity(msg) {
+        gameInstance.SendMessage('WebMgr', 'ReceiveMessageFromPage', msg)
+      }
+
+      function receiveFromUnity(obj) {
+        console.log(obj)
+      }
+    </script>
+    <script type="text/javascript"></script>
+  </head>
+  <body>
+  <!-- <body style="text-align: center"> -->
+    <div id="unityContainer" style="width: 100%; height: 95vh; margin: auto"></div>
+    <!-- <canvas id="unity-canvas" style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <script src="static/Build/FrameWork.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector('#unity-canvas'), {
+        dataUrl: 'Build/FrameWork.data.gz',
+        frameworkUrl: 'Build/FrameWork.framework.js.gz',
+        codeUrl: 'Build/FrameWork.wasm.gz',
+        streamingAssetsUrl: 'StreamingAssets',
+        companyName: 'DefaultCompany',
+        productName: 'Unity_FrameWork',
+        productVersion: '0.1'
+      }).then(unityInstance => {
+        gameInstance = unityInstance
+      }) -->
+    </script>
+  </body>
+</html>

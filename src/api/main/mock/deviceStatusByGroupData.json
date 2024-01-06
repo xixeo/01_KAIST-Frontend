@@ -1,0 +1,19 @@
+{
+    "success": true,
+    "code": 200,
+    "msg": "성공하였습니다.",
+    "list": [
+        {
+            "groupId": "GRP_001",
+            "groupNm": "디바이스 테스트 그룹1",
+            "gadongDeviceCnt": 3,
+            "bigadongDeviceCnt": 3
+        },
+        {
+            "groupId": "GRP_002",
+            "groupNm": "디바이스 테스트 그룹2",
+            "gadongDeviceCnt": 2,
+            "bigadongDeviceCnt": 2
+        }
+    ]
+}

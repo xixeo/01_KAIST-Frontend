@@ -1,0 +1,98 @@
+{
+  "list": [
+    {
+      "domainCd": "admin",
+      "domainNm": "최고관리자",
+      "domainStatusCd": "Y"
+    },
+    {
+      "domainCd": "a",
+      "domainNm": "domainAA",
+      "domainStatusCd": "Y"
+    },
+    {
+      "domainCd": "b",
+      "domainNm": "domainBB",
+      "domainStatusCd": "Y"
+    },
+    {
+      "domainCd": "c",
+      "domainNm": "domainCC",
+      "domainStatusCd": "N"
+    }
+  ],
+  "data": [
+    {
+      "domainCd": "admin",
+      "domainNm": "최고관리자",
+      "domainStatusCd": "Y",
+      "companyNm": "adminA",
+      "corrorateRegNo": "000000-000000-000000",
+      "ownerNm": "OOO",
+      "companyAddress": "부산광역시",
+      "phone": "000-0000-0000",
+      "email": "aaaaaa@naver.com",
+      "serviceStartDt": "2020-12-01",
+      "serviceEndDt": "2022-12-01",
+      "note": "-",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin"
+    },
+    {
+      "domainCd": "a",
+      "domainNm": "domainAA",
+      "domainStatusCd": "Y",
+      "companyNm": "companyA",
+      "corrorateRegNo": "000000-000000-000000",
+      "ownerNm": "OOO",
+      "companyAddress": "부산광역시",
+      "phone": "000-0000-0000",
+      "email": "aaaaaa@naver.com",
+      "serviceStartDt": "2020-12-01",
+      "serviceEndDt": "2022-12-01",
+      "note": "-",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin"
+    },
+    {
+      "domainCd": "b",
+      "domainNm": "domainBB",
+      "domainStatusCd": "Y",
+      "companyNm": "companyB",
+      "corrorateRegNo": "000000-000000-000000",
+      "ownerNm": "OOO",
+      "companyAddress": "부산광역시",
+      "phone": "000-0000-0000",
+      "email": "bbbbbb@naver.com",
+      "serviceStartDt": "2020-12-01",
+      "serviceEndDt": "2022-12-01",
+      "note": "-",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin"
+    },
+    {
+      "domainCd": "c",
+      "domainNm": "domainCC",
+      "domainStatusCd": "N",
+      "companyNm": "companyC",
+      "corrorateRegNo": "000000-000000-000000",
+      "ownerNm": "OOO",
+      "companyAddress": "부산광역시",
+      "phone": "000-0000-0000",
+      "email": "cccccc@naver.com",
+      "serviceStartDt": "2020-12-01",
+      "serviceEndDt": "2022-12-01",
+      "note": "-",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin"
+    }
+  ]
+}

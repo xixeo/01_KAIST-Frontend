@@ -1,0 +1,54 @@
+[
+    {
+        "domainCd": "a",
+        "authgrpCd": "A-1",
+        "authgrpNm": "test_A1",
+        "authgrpType": "A-1",
+        "useYn": "y",
+        "insertId": "system",
+        "insertDt": "2021-04-14 15:39:21",
+        "updateId": "system",
+        "updateDt": "2021-04-14 15:39:33",
+        "__created__": false,
+        "__modified__": false
+    },
+    {
+        "domainCd": "b",
+        "authgrpCd": "B",
+        "authgrpNm": "test_B",
+        "authgrpType": "B",
+        "useYn": "y",
+        "insertId": "system",
+        "insertDt": "2021-04-14 15:39:21",
+        "updateId": "system",
+        "updateDt": "2021-04-14 15:39:33",
+        "__created__": false,
+        "__modified__": false
+    },
+    {
+        "domainCd": "c",
+        "authgrpCd": "C",
+        "authgrpNm": "test_C",
+        "authgrpType": "C",
+        "useYn": "y",
+        "insertId": "system",
+        "insertDt": "2021-04-14 15:39:21",
+        "updateId": "system",
+        "updateDt": "2021-04-14 15:39:33",
+        "__created__": false,
+        "__modified__": false
+    },
+    {
+        "domainCd": "a",
+        "authgrpCd": "A-2",
+        "authgrpNm": "test_A2",
+        "authgrpType": "A-2",
+        "useYn": "y",
+        "insertId": "system",
+        "insertDt": "2021-04-14 15:39:21",
+        "updateId": "system",
+        "updateDt": "2021-04-14 15:39:33",
+        "__created__": false,
+        "__modified__": false
+    }
+]

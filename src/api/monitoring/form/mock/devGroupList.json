@@ -1,0 +1,67 @@
+{
+    "success": true,
+    "code": 200,
+    "msg": "성공하였습니다.",
+    "list": [
+        {
+            "deviceGrpId": "GRP_004",
+            "deviceGrpNm": "디바이스 테스트 그룹4",
+            "description": "디바이스 테스트 그룹4",
+            "devCnt": 0,
+            "dashUseYN": "Y",
+            "useYN": "Y",
+            "insertDt": "2021-09-24 16:16:17.680324",
+            "insertId": "admin",
+            "updateDt": "2021-09-24 16:16:17.680324",
+            "updateId": null
+        },
+        {
+            "deviceGrpId": "TEST42",
+            "deviceGrpNm": "TEST42",
+            "description": "",
+            "devCnt": 0,
+            "dashUseYN": "Y",
+            "useYN": "Y",
+            "insertDt": "2021-10-01 13:59:55.542907",
+            "insertId": "admin",
+            "updateDt": "2021-10-01 13:59:55.542907",
+            "updateId": null
+        },
+        {
+            "deviceGrpId": "grptest",
+            "deviceGrpNm": "test",
+            "description": "test",
+            "devCnt": 0,
+            "dashUseYN": "N",
+            "useYN": "Y",
+            "insertDt": "2021-09-30 17:18:13.008871",
+            "insertId": "admin",
+            "updateDt": "2021-09-30 17:18:13.008871",
+            "updateId": null
+        },
+        {
+            "deviceGrpId": "testgr",
+            "deviceGrpNm": "tet",
+            "description": "tewt",
+            "devCnt": 0,
+            "dashUseYN": "Y",
+            "useYN": "Y",
+            "insertDt": "2021-09-30 18:17:35.614434",
+            "insertId": "admin",
+            "updateDt": "2021-09-30 18:17:35.614434",
+            "updateId": null
+        },
+        {
+            "deviceGrpId": "GRP_009",
+            "deviceGrpNm": "GRUP9",
+            "description": "",
+            "devCnt": 0,
+            "dashUseYN": "Y",
+            "useYN": "Y",
+            "insertDt": "2021-10-01 09:36:27.666729",
+            "insertId": "",
+            "updateDt": "2021-10-01 09:36:27.666729",
+            "updateId": null
+        }
+    ]
+}

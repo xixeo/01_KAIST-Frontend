@@ -1,0 +1,74 @@
+{
+  "treeList": [
+    {
+      "domainCd": "a",
+      "asgnCd": "asgn001",
+      "asgnNm": "회사1",
+      "sort": 1,
+      "level": 0,
+      "prntsCd": "0",
+      "note": "-",
+      "asgnType": "asgn1",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin"
+    },
+    {
+      "domainCd": "a",
+      "asgnCd": "asgn002",
+      "asgnNm": "회사2",
+      "sort": 2,
+      "level": 0,
+      "prntsCd": "0",
+      "note": "-",
+      "asgnType": "asgn1",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin"
+    },
+    {
+      "domainCd": "a",
+      "asgnCd": "asgn003",
+      "asgnNm": "부서1",
+      "sort": 1,
+      "level": 1,
+      "prntsCd": "asgn001",
+      "note": "-",
+      "asgnType": "asgn2",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin"
+    },
+    {
+      "domainCd": "a",
+      "asgnCd": "asgn004",
+      "asgnNm": "부서2",
+      "sort": 1,
+      "level": 1,
+      "prntsCd": "asgn002",
+      "note": "-",
+      "asgnType": "asgn2",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin"
+    },
+    {
+      "domainCd": "a",
+      "asgnCd": "asgn005",
+      "asgnNm": "팀1",
+      "sort": 1,
+      "level": 2,
+      "prntsCd": "asgn003",
+      "note": "-",
+      "asgnType": "asgn4",
+      "insertDt": "2020-12-01",
+      "insertId": "admin",
+      "updateDt": "2021-03-19",
+      "updateId": "admin"
+    }
+  ]
+}

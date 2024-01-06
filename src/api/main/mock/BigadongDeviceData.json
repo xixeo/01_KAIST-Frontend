@@ -1,0 +1,69 @@
+{
+    "list": [
+        {
+            "running": false,
+            "jsondata": "{\"data\":  [    {      \"device_type\": \"type1\",      \"measure_dtm\": 20210929152331,      \"temp\": 2,      \"message\": \"BEKc81fQz3oLK6VBK6KLLLLDJ3F8KTFG7SdycDlf\"    }  ]}",
+            "last": 20210929152331,
+            "device_id": "device_1",
+            "device_grp_id": "GRP_001",
+            "device_nm": "온도센서1",
+            "device_grp_nm": "디바이스 테스트 그룹1",
+            "device_type": "devType02",
+            "time": "2021-09-29T15:23:31.611705617+09:00",
+            "device_unique_id": "00123456780921",
+            "message": "BEKc81fQz3oLK6VBK6KLLLLDJ3F8KTFG7SdycDlf"
+        },
+        {
+            "running": false,
+            "jsondata": "{\"data\":  [    {      \"device_type\": \"type4\",      \"measure_dtm\": 20210929152323,      \"temp\": 80,      \"message\": \"FbqDSDLLDS3KDgFnLi7t4grBLoa9dDDJ8GD9LlVi\"    }  ]}",
+            "last": 20210929152323,
+            "device_id": "device_2",
+            "device_grp_id": "GRP_001",
+            "device_nm": "온도센서2",
+            "device_grp_nm": "디바이스 테스트 그룹1",
+            "device_type": "TEST",
+            "time": "2021-09-29T15:23:23.316665436+09:00",
+            "device_unique_id": "00123456780922",
+            "message": "FbqDSDLLDS3KDgFnLi7t4grBLoa9dDDJ8GD9LlVi"
+        },
+        {
+            "running": false,
+            "jsondata": "{\"data\":  [    {      \"device_type\": \"type2\",      \"measure_dtm\": 20210929152337,      \"temp\": 40,      \"message\": \"ttD6oj9cC2DXf8OKtqJI9IKdsLVSPPZdLDDsluF0\"    }  ]}",
+            "last": 20210929152337,
+            "device_id": "device_3",
+            "device_grp_id": "GRP_001",
+            "device_nm": "온도센서3",
+            "device_grp_nm": "디바이스 테스트 그룹1",
+            "device_type": "TEST",
+            "time": "2021-09-29T15:23:37.311303205+09:00",
+            "device_unique_id": "00123456780923",
+            "message": "ttD6oj9cC2DXf8OKtqJI9IKdsLVSPPZdLDDsluF0"
+        },
+        {
+            "running": false,
+            "jsondata": "{\"data\":  [    {      \"device_type\": \"type2\",      \"measure_dtm\": 20210929152335,      \"temp\": 31,      \"message\": \"iH2JSCf2KLJK6gr0jhsGDDWDFK1SID1K3KDSLDtD\"    }  ]}",
+            "last": 20210929152335,
+            "device_id": "device_20",
+            "device_grp_id": "GRP_002",
+            "device_nm": "열감지센서2",
+            "device_grp_nm": "디바이스 테스트 그룹2",
+            "device_type": "devType01",
+            "time": "2021-09-29T15:23:35.075461621+09:00",
+            "device_unique_id": "00123459780820",
+            "message": "iH2JSCf2KLJK6gr0jhsGDDWDFK1SID1K3KDSLDtD"
+        },
+        {
+            "running": false,
+            "jsondata": "{\"data\":  [    {      \"device_type\": \"type4\",      \"measure_dtm\": 20210929152339,      \"temp\": 77,      \"message\": \"DLSF5hKTDzF8LX3CLSQ2mJshDSIKVXjDuz8pSn5F\"    }  ]}",
+            "last": 20210929152339,
+            "device_id": "device_10",
+            "device_grp_id": "GRP_002",
+            "device_nm": "열감지센서1",
+            "device_grp_nm": "디바이스 테스트 그룹2",
+            "device_type": "TEST",
+            "time": "2021-09-29T15:23:39.932873072+09:00",
+            "device_unique_id": "00123459780910",
+            "message": "DLSF5hKTDzF8LX3CLSQ2mJshDSIKVXjDuz8pSn5F"
+        }
+    ]
+}

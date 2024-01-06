@@ -1,0 +1,110 @@
+.navbar {
+  height: $navbar-height;
+  overflow: hidden;
+  position: relative;
+  background: $navbar-bg;
+  box-shadow: 0 1px 1px rgba(0, 21, 41, 0.08);
+  border-bottom: 1px solid $base-box-border-color;
+
+  .errLog-container {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .sub-title {
+    display: block;
+    text-align: left;
+    font-size: 0.78rem; // 1.18rem;
+    line-height: 1rem;
+    margin-left: 1%;
+  }
+
+  .left-menu {
+    float: left;
+    height: 100%;
+    line-height: 30px;
+
+    .left-menu-item {
+      display: inline-block;
+      padding: 0 8px;
+      height: 100%;
+      font-size: 28px;
+      color: $navbar-item-color;
+      vertical-align: text-center;
+
+      &.hover-effect {
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &.title {
+          font-size: 1.6rem; // 2.25rem;
+          font-weight: bold;
+          margin-top: 1%;
+          margin-left: 1%;
+          text-shadow: 1px 2px 0 $base-shadow-color;
+        }
+        &:hover {
+          transition: all 1s;
+          @include textshadow;
+        }
+      }
+    }
+  }
+
+  .right-menu {
+    float: right;
+    height: 100%;
+    line-height: 50px;
+
+    &:focus {
+      outline: none;
+    }
+
+    .right-menu-item {
+      display: inline-block;
+      padding: 0 8px;
+      height: 100%;
+      font-size: 18px;
+      color: $navbar-item-color;
+      vertical-align: text-bottom;
+
+      &.hover-effect {
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &.title {
+          font-size: 12px;
+          font-weight: bold;
+          margin-top: 5px;
+        }
+        &:hover {
+          background: rgba(0, 0, 0, 0.025);
+        }
+      }
+    }
+
+    .avatar-container {
+      margin-right: 30px;
+
+      .avatar-wrapper {
+        margin-top: 5px;
+        position: relative;
+
+        .user-avatar {
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+          border-radius: 10px;
+        }
+
+        .el-icon-caret-bottom {
+          cursor: pointer;
+          position: absolute;
+          right: -20px;
+          top: 25px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

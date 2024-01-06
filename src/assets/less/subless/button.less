@@ -1,0 +1,24 @@
+.frame_btn {
+
+    margin-bottom: 1px;
+    margin-left: 4px;
+
+    &.frame_btn_con_clr3 {
+        border-color: @btnColor_01;
+        color: @subColor_09;
+        background-color: @btnColor_01;
+    
+        &:hover {
+          border-color: @subColor_01;
+          color: @subColor_09;
+          background-color: @subColor_01;
+        }
+    
+        &:disabled {
+          border-color: @btnColor_10;
+          color: @btnColor_02;
+          background-color: @btnColor_10;
+          cursor: default;
+        }
+      }
+}
